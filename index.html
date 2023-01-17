@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <link rel="icon" href="./assects/img/logo.png" />
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assects/css/animate.min.css" />
+    <link rel="stylesheet" href="./assects/css/cus.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <div class="loading">
+      <span class="loader"></span>
+    </div>
+
+    <div
+      id="fixedNav"
+      class="bg-green-400 dark:bg-slate-900 animate__animated w-full"
+    >
+      <div class="container mx-auto py-1 lg:px-28">
+        <div class="flex justify-between items-center">
+          <!-- logo -->
+          <div class="">
+            <img
+              src="./assects/img/favicon.svg"
+              alt=""
+              class="w-28 ml-8 lg:ml-0"
+            />
+          </div>
+          <!-- menu -->
+          <div
+            id="mobile"
+            class="lg:flex fixed lg:static top-0 h-screen lg:h-auto bg-white dark:bg-slate-900 lg:bg-transparent -left-full w-full z-10 lg:z-0 flex justify-center items-center duration-500"
+          >
+            <div
+              id="menu-close"
+              class="lg:hidden top-0 absolute flex items-center justify-center right-0 border border-green-500 w-10 h-10 rounded-full mr-4 mt-3"
+            >
+              <i class="fa-solid fa-xmark text-2xl dark:text-white"></i>
+            </div>
+            <ul
+              class="flex lg:space-x-4 lg:flex-row flex-col space-y-10 lg:space-y-0 items-center lg:text-base text-xl font-bold lg:text-white text-slate-900 dark:text-white"
+            >
+              <a
+                href="#home"
+                class="hover:text-slate-500 duration-500 transition cursor-pointer active-link"
+              >
+                Home
+              </a>
+              <a
+                href="#why"
+                class="hover:text-slate-500 duration-500 transition cursor-pointer"
+              >
+                Why?
+              </a>
+              <a
+                href="#fea"
+                class="hover:text-slate-500 duration-500 transition cursor-pointer"
+              >
+                Features
+              </a>
+              <a
+                href="#blog"
+                class="hover:text-slate-500 duration-500 transition cursor-pointer"
+              >
+                Blog
+              </a>
+            </ul>
+          </div>
+
+          <!-- dark-mode -->
+          <div class="flex items-center justify-center scale-50 md:scale-100">
+            <button
+              id="dark-switch"
+              onclick="toggleTheme()"
+              class="border border-slate-500 w-[85px] flex items-center transition duration-200 rounded-full m-2 bg-slate-800 p-1"
+            >
+              <div
+                id="dark-switch-icon"
+                class="bg-slate-50 w-8 h-8 rounded-full transform transition duration-200 flex justify-center items-center"
+              >
+                <i class="fa-regular fa-sun"></i>
+              </div>
+              <h6 id="dark-text" class="text-slate-300 translate-x-1 font-bold">
+                OFF
+              </h6>
+            </button>
+            <div class="lg:hidden mobile-menu">
+              <i class="fa-solid fa-bars text-white ml-9 text-3xl"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- hero section -->
+    <section class="bg-green-400 dark:bg-slate-800" id="home">
+      <div class="container mx-auto lg:py-40 py-32 px-10 lg:px-0">
+        <div class="flex flex-col justify-center items-center">
+          <h1 class="text-white font-bold text-4xl headline">
+            IMAGINE A PLACE
+          </h1>
+          <p
+            class="text-slate-200 font-bold text-xs mt-4 lg:max-w-xl text-center headline"
+          >
+            ...where you can belong to a school club, a gaming group or a
+            worldwide art community.Where just you and a handful of friends can
+            spend time together.A place that makes it easy to talk everyday and
+            hangout more often.
+          </p>
+          <div class="mt-5 lg:space-x-3 text-center">
+            <button
+              class="headline mb-5 px-12 border border-slate-500 rounded-full py-3 bg-white font-bold text-green-500 hover:scale-105 duration-500"
+            >
+              <i class="fa-solid fa-download text-green-500"></i>
+              Download Now
+            </button>
+            <button
+              class="headline px-12 border bg-slate-900 border-slate-500 rounded-full py-3 font-bold text-white hover:scale-105 duration-500"
+            >
+              <i class="fa-solid fa-cart-shopping"></i>
+              Download Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- chart section -->
+    <section class="bg-white dark:bg-slate-900" id="why">
+      <div class="container mx-auto lg:py-60 py-32 lg:px-28 px-5">
+        <div class="grid lg:grid-cols-2 items-center lg:space-x-14">
+          <div class="shadow-md dark:shadow-green-500 p-5 rounded-3xl headline">
+            <h1 class="font-bold text-3xl dark:text-white">Chats</h1>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-14 text-center lg:text-left">
+            <h1 class="font-bold text-3xl dark:text-white headline">
+              Create an invite-only place where you belong
+            </h1>
+            <p class="mt-5 text-slate-400 font-semibold headline">
+              Vanillla servers are organized into topic-based channels where you
+              can collaborate, share, and just talk about your day without
+              clogging up a group chat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- second chart -->
+    <section class="bg-slate-100 dark:bg-slate-800" id="fea">
+      <div class="container mx-auto lg:py-60 py-32 lg:px-28 px-5">
+        <div class="grid lg:grid-cols-2 items-center lg:space-x-14">
+          <div class="mb-14 text-center lg:text-right">
+            <h1 class="font-bold text-3xl dark:text-white headline">
+              Where hanging out is easy
+            </h1>
+            <p class="mt-5 text-slate-400 font-semibold headline">
+              Vanillla servers are organized into topic-based channels where you
+              can collaborate, share, and just talk about your day without
+              clogging up a group chat.
+            </p>
+          </div>
+          <div class="shadow-md dark:shadow-green-500 p-5 rounded-3xl headline">
+            <h1 class="font-bold text-3xl dark:text-white">Chats</h1>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- third chart -->
+    <section class="bg-white dark:bg-slate-900">
+      <div class="container mx-auto lg:py-60 py-32 lg:px-28 px-5">
+        <div class="grid lg:grid-cols-2 items-center lg:space-x-14">
+          <div class="shadow-md dark:shadow-green-500 p-5 rounded-3xl headline">
+            <h1 class="font-bold text-3xl dark:text-white">Chats</h1>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="p-2 border rounded-xl mt-3 dark:border-green-500">
+              <div class="flex items-center space-x-3">
+                <div
+                  class="bg-green-500 w-10 h-10 text-white flex justify-center items-center rounded-full"
+                >
+                  <i class="fa-solid fa-power-off"></i>
+                </div>
+                <div class="">
+                  <h6 class="font-bold text-xl dark:text-white">
+                    #tailwindcss
+                  </h6>
+                  <p class="font-semibold text-green-500">
+                    Nway Oo: Thanks for everything.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-14 text-center lg:text-left">
+            <h1 class="font-bold text-3xl dark:text-white headline">
+              From few to a fandom
+            </h1>
+            <p class="mt-5 text-slate-400 font-semibold headline">
+              Get any community running with moderation tools ans custom member
+              access. Give members special powers, set up private channels, and
+              more.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- device -->
+    <section id="blog">
+      <section class="bg-slate-100 dark:bg-slate-800">
+        <div class="container mx-auto py-56 lg:px-28 px-5">
+          <div class="flex flex-col space-y-4 justify-center items-center">
+            <h1 class="text-4xl font-bold dark:text-white text-center headline">
+              RELIABLE TECH FOR STAYING CLOSE
+            </h1>
+            <p
+              class="headline max-w-lg text-slate-500 dark:text-slate-400 font-semibold text-center"
+            >
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. At,
+              placeat nemo quas ipsa quidem aut. Ad minus perferendis quo
+              similique.
+            </p>
+          </div>
+          <div class="text-center mt-24">
+            <img src="../assects/img/device.svg" alt="" class="headline" />
+            <h1 class="mt-20 text-3xl font-bold dark:text-white headline">
+              Ready to start your journey
+            </h1>
+            <button
+              class="headline bg-green-500 px-20 mt-10 py-3 rounded-full text-white font-bold"
+            >
+              <i class="fa-solid fa-cart-shopping mx-3"></i>
+              Order Now
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="py-28 bg-slate-900">
+        <div class="container mx-auto px-11 md:px-0 lg:px-28 space-y-10">
+          <div class="grid md:grid-cols-6 gap-10 md:gap-5 text-start">
+            <div class="text-4xl col-span-2 text-slate-200 font-bold">
+              IMAGINE A PLACE
+            </div>
+            <div>
+              <h4 class="text-slate-300 font-bold mb-1">Product</h4>
+              <ul class="space-y-1">
+                <li class="text-slate-50 font-semibold">Download</li>
+                <li class="text-slate-50 font-semibold">Status</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-slate-300 font-bold mb-1">Company</h4>
+              <ul class="space-y-1">
+                <li class="text-slate-50 font-semibold">About</li>
+                <li class="text-slate-50 font-semibold">Jobs</li>
+                <li class="text-slate-50 font-semibold">Branding</li>
+                <li class="text-slate-50 font-semibold">Newsroom</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-slate-300 font-bold mb-1">Resources</h4>
+              <ul class="space-y-1">
+                <li class="text-slate-50 font-semibold">College</li>
+                <li class="text-slate-50 font-semibold">Support</li>
+                <li class="text-slate-50 font-semibold">Safety</li>
+                <li class="text-slate-50 font-semibold">Blog</li>
+                <li class="text-slate-50 font-semibold">Feedback</li>
+                <li class="text-slate-50 font-semibold">Policies</li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="text-slate-300 font-bold mb-1">Policies</h4>
+              <ul class="space-y-1">
+                <li class="text-slate-50 font-semibold">Terms</li>
+                <li class="text-slate-50 font-semibold">Privacy</li>
+                <li class="text-slate-50 font-semibold">Guidelines</li>
+              </ul>
+            </div>
+          </div>
+          <div class="border border-green-500"></div>
+          <div class="flex justify-between">
+            <h3 class="text-4xl text-slate-200 font-bold">Vanilla</h3>
+            <button class="bg-green-500 py-3 px-8 rounded-full text-white">
+              <i class="fa-solid fa-cart-shopping mr-2"></i>
+              <span>Sign up</span>
+            </button>
+          </div>
+        </div>
+      </footer>
+    </section>
+
+    <script src="./assects/js/jquery-3.6.0.min.js"></script>
+    <script src="./assects/js/jquery.waypoints.min.js"></script>
+    <script src="./assects/js/scrollreveal.min.js"></script>
+    <script src="./assects/js/cus.js"></script>
+    <script>
+      // scrollreval
+      ScrollReveal().reveal(".headline", {
+        origin: "bottom",
+        distance: "100px",
+        duration: 2000,
+        reset: true,
+        interval: 200,
+        scale: 0.8,
+        viewFactor: 0.2,
+      });
+
+      //mobile menu
+      const mobileMenu = document.querySelector(".mobile-menu");
+      const mobile = document.querySelector("#mobile");
+      const mobileClose = document.querySelector("#menu-close");
+      mobileMenu.addEventListener("click", () => {
+        mobile.style.left = "0";
+      });
+
+      mobileClose.addEventListener("click", () => {
+        mobile.style.left = "-100%";
+      });
+    </script>
+  </body>
+</html>
